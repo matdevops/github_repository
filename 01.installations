@@ -1,0 +1,167 @@
+************************  Hardware requirement ******************************************
+java  above 7
+RAM 2GB
+
+****************** Install Jenkin *******************************************************
+jenkin login: rathan / bigdata098!
+
+********************** update s/w and adding reposiries **********************************
+Goto Terminal and type below commands
+
+https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu   --------------> - this link to install jenkins
+
+wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -         -> download the jenjin packages & adding the
+											      reposiries 
+
+
+
+
+$ wget -q -O - https://pkg.jenkins.io/debian/jenkins-ci.org.key | sudo apt-key add -
+$ sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+
+
+sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+- after package the downloaded jenkins its for debian family
+
+apt-get update
+
+- to update out local m/c
+
+************************** make sure all dependencies are upto date ********************************
+
+apt-get install jenkins
+- installation of jenkins
+
+after installation got to browser //localhost:8080 (daufult jenkins run on port 8080)
+
+copy the command on jenkin login page 
+
+hit the above command on terminal to pwd
+
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+copy pwd and paste in jenkins browser
+
+goto http://localhost:8080/
+
+********************************** Git & Mevean installation in local **************************
+
+sudo apt-get update
+
+sudo apt-get install git
+
+
+check git git installed: at command prompt type git --version
+nake sure:  git version 2.9.3
+
+
+sudo apt-get update
+
+sudo apt-get install maven
+check mavean installed: at command prompt type mvn --version
+
+	Apache Maven 3.3.9 (bb52d8502b132ec0a5a3f4c09453c07478323dc5; 2015-11-10T22:11:47+05:30)
+	Maven home: /usr/local/apache-maven
+	Java version: 1.8.0_131, vendor: Oracle Corporation
+	Java home: /usr/lib/jvm/java-8-openjdk-amd64/jre
+	Default locale: en_IN, platform encoding: UTF-8
+	OS name: "linux", version: "4.8.0-49-generic", arch: "amd64", family: "unix"
+
+**********************then login to jenkin server and install the git & mavean other required plgins *************************************
+
+- goto http://localhost:8080/
+> Manage Jenkins > Manage Plugins> available TAB and search and install 'Git plugin'
+
+
+> Manage Jenkins > Manage Plugins> available TAB and search and install 'Maven Integration plugin'
+
+
+**********************configurations in jenkins job*************************************
+
+create a job nothing but project name > New Item > Enter an item name
+
+select project style as freestyle project
+
+click ok
+
+- 'General' tab
+- 'Source Code Management' tab
+	select Git  and give 'Repository URL' 'https://github.com/wakaleo/game-of-life.git'
+- 'Build'
+	Build > click 'Add build setup' > select 'invoke top level mavean target'
+	Goals 
+	   Package
+	Save build the project
+
+------------------ Next
+
+Nexas
+
+AWS bean stalk account
+	beans stalk
+
+
+********************* AWS  ****************************
+
+link: https://www.amazon.com
+
+srathangoud@gmail.com / bigdata098!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**************************************** purge ***********************************************
+purge jenkins
+
+purge git
+
+purge mvn
+
+
+
